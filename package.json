@@ -1,9 +1,9 @@
 {
-  "name": "react-quickstart",
+  "name": "github-actions-react-demo",
   "description": "Minimal React app template which uses CI to deploy to GitHub Pages",
-  "version": "1.2.0",
-  "author": "MichaelCurrin",
-  "license": "MIT",
+  "version": "9.9.9",
+  "author": "BartoszWolanczyk",
+  "license": "NASA, FBI, KFC",
   "scripts": {
     "start": "react-scripts start",
     "test": "react-scripts test",
@@ -24,10 +24,10 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10"
   },
-  "homepage": "https://michaelcurrin.github.io/react-quickstart/",
+  "homepage": "https://bartoszwolanczyk.github.io/github-actions-react-demo/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelcurrin/react-quickstart.git"
+    "url": "git+https://github.com/bwolanczyk87/react-quickstart.git"
   },
   "eslintConfig": {
     "extends": [
