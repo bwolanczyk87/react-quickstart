@@ -24,7 +24,7 @@
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10"
   },
-  "homepage": "https://bartoszwolanczyk.github.io/github-actions-react-demo/",
+  "homepage": "https://bwolanczyk87.github.io/react-quickstart/",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bwolanczyk87/react-quickstart.git"
