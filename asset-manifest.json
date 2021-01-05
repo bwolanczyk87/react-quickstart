@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/github-actions-react-demo/static/css/main.c0fda4af.chunk.css",
-    "main.js": "/github-actions-react-demo/static/js/main.5df6ee00.chunk.js",
-    "main.js.map": "/github-actions-react-demo/static/js/main.5df6ee00.chunk.js.map",
-    "runtime-main.js": "/github-actions-react-demo/static/js/runtime-main.2526c03b.js",
-    "runtime-main.js.map": "/github-actions-react-demo/static/js/runtime-main.2526c03b.js.map",
-    "static/js/2.b5fdb138.chunk.js": "/github-actions-react-demo/static/js/2.b5fdb138.chunk.js",
-    "static/js/2.b5fdb138.chunk.js.map": "/github-actions-react-demo/static/js/2.b5fdb138.chunk.js.map",
-    "static/js/3.cd1b1d60.chunk.js": "/github-actions-react-demo/static/js/3.cd1b1d60.chunk.js",
-    "static/js/3.cd1b1d60.chunk.js.map": "/github-actions-react-demo/static/js/3.cd1b1d60.chunk.js.map",
-    "index.html": "/github-actions-react-demo/index.html",
-    "static/css/main.c0fda4af.chunk.css.map": "/github-actions-react-demo/static/css/main.c0fda4af.chunk.css.map",
-    "static/js/2.b5fdb138.chunk.js.LICENSE.txt": "/github-actions-react-demo/static/js/2.b5fdb138.chunk.js.LICENSE.txt",
-    "static/media/logo.103b5fa1.svg": "/github-actions-react-demo/static/media/logo.103b5fa1.svg"
+    "main.css": "/react-quickstart/static/css/main.c0fda4af.chunk.css",
+    "main.js": "/react-quickstart/static/js/main.5df6ee00.chunk.js",
+    "main.js.map": "/react-quickstart/static/js/main.5df6ee00.chunk.js.map",
+    "runtime-main.js": "/react-quickstart/static/js/runtime-main.2daf661b.js",
+    "runtime-main.js.map": "/react-quickstart/static/js/runtime-main.2daf661b.js.map",
+    "static/js/2.b5fdb138.chunk.js": "/react-quickstart/static/js/2.b5fdb138.chunk.js",
+    "static/js/2.b5fdb138.chunk.js.map": "/react-quickstart/static/js/2.b5fdb138.chunk.js.map",
+    "static/js/3.cd1b1d60.chunk.js": "/react-quickstart/static/js/3.cd1b1d60.chunk.js",
+    "static/js/3.cd1b1d60.chunk.js.map": "/react-quickstart/static/js/3.cd1b1d60.chunk.js.map",
+    "index.html": "/react-quickstart/index.html",
+    "static/css/main.c0fda4af.chunk.css.map": "/react-quickstart/static/css/main.c0fda4af.chunk.css.map",
+    "static/js/2.b5fdb138.chunk.js.LICENSE.txt": "/react-quickstart/static/js/2.b5fdb138.chunk.js.LICENSE.txt",
+    "static/media/logo.103b5fa1.svg": "/react-quickstart/static/media/logo.103b5fa1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.2526c03b.js",
+    "static/js/runtime-main.2daf661b.js",
     "static/js/2.b5fdb138.chunk.js",
     "static/css/main.c0fda4af.chunk.css",
     "static/js/main.5df6ee00.chunk.js"
