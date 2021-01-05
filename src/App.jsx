@@ -8,8 +8,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <h1>Hello, world!</h1>
-        <p>Welcome to React Quickstart</p>
+        <h1>Hello, Avanade!</h1>
+        <p>Welcome to Github Actions demo!</p>
       </header>
 
       <div>
@@ -21,8 +21,8 @@ function App() {
 
         <p>
           GitHub repo:{' '}
-          <a href="https://github.com/MichaelCurrin/react-quickstart" target="_blank" rel="noopener noreferrer">
-            MichaelCurrin/react-quickstart
+          <a href="https://github.com/bwolanczyk87/react-quickstart" target="_blank" rel="noopener noreferrer">
+            bwolanczyk87/react-quickstart
           </a>
         </p>
       </div>
