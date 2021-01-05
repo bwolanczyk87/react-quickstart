@@ -8,15 +8,15 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
-        <h1>Hello, Avanade!</h1>
-        <p>Welcome to Github Actions demo!</p>
+        <h1>Hello, world!</h1>
+        <p>Welcome to React Quickstart</p>
       </header>
 
       <div>
         <p>
-          Killer <code>is</code> dead:
+          Using the <code>Foo</code> component:
         </p>
-        <Foo text="Jak to zdechł?" />
+        <Foo text="Dynamic text" />
         <br />
 
         <p>
