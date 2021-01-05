@@ -16,7 +16,7 @@ function App() {
         <p>
           Using the <code>Foo</code> component:
         </p>
-        <Foo text="Dynamic text" />
+        <Foo text="Killer is alive" />
         <br />
 
         <p>
