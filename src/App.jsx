@@ -14,9 +14,9 @@ function App() {
 
       <div>
         <p>
-          Using the <code>Foo</code> component:
+          Killer <code>is</code> dead:
         </p>
-        <Foo text="Dynamic text" />
+        <Foo text="Jak to zdechł?" />
         <br />
 
         <p>
