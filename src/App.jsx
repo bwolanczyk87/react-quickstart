@@ -14,9 +14,9 @@ function App() {
 
       <div>
         <p>
-          Using the <code>Foo</code> component:
+          Using the <code>Foo</code> component: 
         </p>
-        <Foo text="Killer is alive" />
+        <Foo text="Killer is dead" />
         <br />
 
         <p>
