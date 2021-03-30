@@ -10,18 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: NodeTool@0
-  inputs:
-    versionSpec: '10.x'
-  displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
-
-- script: zip -r $(system.teamProject) $(pipeline.workspace) -x ./node_modules/\*
-  displayName: 'npm install and build'
+- script: zip -r $(system.teamProject).zip $(pipeline.workspace) -x ./node_modules/\*
+  displayName: 'Zip application to scan'
 
 - task: Veracode@3
   inputs:
