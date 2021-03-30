@@ -11,7 +11,7 @@ pool:
 
 steps:
 
-- script: zip -r $(system.teamProject).zip $(pipeline.workspace) -x ./node_modules/\*
+- script: zip -r $(system.teamProject).zip $($(pipeline.workspace)) -x ./node_modules/\*
   displayName: 'Zip application to scan'
 
 - task: Veracode@3
@@ -20,8 +20,9 @@ steps:
     AnalysisService: 'odp-cds-veracode-analysis'
     veracodeAppProfile: '$(system.teamProject)'
     version: '$(build.buildNumber)'
-    filepath: '$(pipeline.workspace)'
+    filepath: '$(build.artifactstagingdirectory)'
+    optargs: '-fail_on_severity="Very High, High, Medium"'
+    createProfile: true
     failTheBuildIfVeracodeScanDidNotInitiate: true
-    failBuildOnPolicyFail: true
     maximumWaitTime: '360'
     
