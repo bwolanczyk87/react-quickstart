@@ -11,10 +11,12 @@ pool:
 
 variables:
 - group: Veracode account credentials
+- name: repository_name
+  value: $[replace(variables['Build.Repository.Name']', '/', '-')]
 
 steps:
 
-- script: zip -r $(Build.Repository.ID).zip . -x ./node_modules/\*
+- script: zip -r $(repository_name).zip . -x ./node_modules/\*
   displayName: 'Zip application to scan'
 
 - script: curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
@@ -24,8 +26,8 @@ steps:
   displayName: Unzip the Pipeline Scanner
 
 - script: java -jar $(System.DefaultWorkingDirectory)/veracode/pipeline-scan.jar
-          --file $(System.DefaultWorkingDirectory)/$(Build.Repository.ID).zip
-          --project_name "$(Build.Repository.ID)"
+          --file $(System.DefaultWorkingDirectory)/$(repository_name).zip
+          --project_name "$(repository_name)"
           --veracode_api_id "$(api_id)"
           --veracode_api_key "$(api_key)"
           --fail_on_severity="Very High, High, Medium"
