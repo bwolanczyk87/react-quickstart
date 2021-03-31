@@ -12,7 +12,7 @@ pool:
 variables:
 - group: Veracode account credentials
 - name: repository_name
-  value: $[replace(variables['Build.Repository.Name'], '/', '-')]
+  value: $[replace($(Build.Repository.Name), '/', '-')]
 
 steps:
 
