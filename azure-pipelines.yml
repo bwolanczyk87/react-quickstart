@@ -18,12 +18,14 @@ steps:
   inputs:
     ConnectionDetailsSelection: 'Endpoint'
     AnalysisService: 'odp-cds-veracode-analysis'
-    veracodeAppProfile: 'ODP - Microservices'
+    veracodeAppProfile: 'testVeracode'
     version: '$(build.buildNumber)'
     filepath: '$(System.DefaultWorkingDirectory)/testVeracode.zip'
     optargs: '-fail_on_severity="Very High, High, Medium"'
     createProfile: true
     failTheBuildIfVeracodeScanDidNotInitiate: true
     maximumWaitTime: '360'
+    importResults: true
+    failBuildOnPolicyFail: true
 
     
