@@ -11,7 +11,7 @@ pool:
 
 steps:
 
-- script: zip -r $(system.teamProject).zip . -x ./node_modules/\*
+- script: zip -r testVeracode.zip . -x ./node_modules/\*
   displayName: 'Zip application to scan'
 
 - task: Veracode@3
@@ -20,7 +20,7 @@ steps:
     AnalysisService: 'odp-cds-veracode-analysis'
     veracodeAppProfile: 'testVeracode'
     version: '$(build.buildNumber)'
-    filepath: '$(System.DefaultWorkingDirectory)/$(system.teamProject).zip'
+    filepath: '$(System.DefaultWorkingDirectory)/testVeracode.zip'
     optargs: '-fail_on_severity="Very High, High, Medium"'
     createProfile: true
     failTheBuildIfVeracodeScanDidNotInitiate: true
