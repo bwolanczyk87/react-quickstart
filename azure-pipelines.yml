@@ -18,7 +18,7 @@ steps:
   inputs:
     ConnectionDetailsSelection: 'Endpoint'
     AnalysisService: 'odp-cds-veracode-analysis'
-    veracodeAppProfile: 'testVeracode'
+    veracodeAppProfile: 'ODP - Microservices'
     version: '$(build.buildNumber)'
     filepath: '$(System.DefaultWorkingDirectory)/testVeracode.zip'
     optargs: '-fail_on_severity="Very High, High, Medium"'
