@@ -12,4 +12,4 @@ pool:
 jobs:
 - job: Veracode
   steps:
-  - template: templates/veracode_scan.yml
+  - template: $(Pipeline.Workspace)/templates/veracode_scan.yml
