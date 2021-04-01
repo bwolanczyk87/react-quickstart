@@ -23,5 +23,5 @@ jobs:
   steps:
   - template: templates/veracode_scan.yml@templates
     parameters:
-      api_id: $(api_id)
-      api_key: $(api_key)
+      api_id: $(veracode_api_id)
+      api_key: $(veracode_api_key)
