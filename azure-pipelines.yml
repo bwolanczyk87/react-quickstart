@@ -11,7 +11,7 @@ pool:
 
 variables:
   repositoryBranch: $[replace(variables['Build.SourceBranch'], '/', '-')]
-  repositoryName: $[replace(variables['Build.Repository.Name'], '/', '-')]
+  repositoryName: variables['Build.Repository.Name']
   isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
 
 steps:
