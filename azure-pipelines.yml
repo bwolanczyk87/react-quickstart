@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- group: Veracode account credentials
+- group: Veracode account credentials x
 
 steps:
 - powershell: |
@@ -34,3 +34,4 @@ steps:
         --veracode_api_key "$(api_key)"
         --fail_on_severity="Very High, High, Medium"
   displayName: Run Pipeline Scanner
+  condition: ne($(api_id), '') && ne($(api_key), '')
