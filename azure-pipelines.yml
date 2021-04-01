@@ -12,4 +12,4 @@ pool:
 jobs:
 - job: Veracode
   steps:
-  - template: templates/veracode_scanning.yml
+  - template: templates/veracode_scan.yml
