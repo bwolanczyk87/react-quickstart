@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  repositoryName: $[replace(variables['Build.Repository.Name'], "/", "_")]
+  repositoryName: $[replace(variables['Build.Repository.Name'], 'a', '_')]
   isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
 
 steps:
