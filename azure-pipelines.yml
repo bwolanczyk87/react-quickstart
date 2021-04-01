@@ -12,6 +12,9 @@ resources:
     type: git
     name: ODP-CDS
 
+variables:
+- group: veracode_credentials
+
 pool:
   vmImage: ubuntu-latest
 
