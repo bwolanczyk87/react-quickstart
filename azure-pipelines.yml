@@ -10,9 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-- group: Veracode account credentials
-- name: repository_name
-  value: $[replace(variables['Build.Repository.Name'], '/', '_')]
+  repository_name: $[replace(variables['Build.Repository.Name'], '/', '_')]
 
 steps:
 
