@@ -6,10 +6,16 @@
 trigger:
 - master
 
+resources:
+  repositories:
+  - repository: templates
+    type: git
+    name: ODP-CDS
+
 pool:
   vmImage: ubuntu-latest
 
 jobs:
 - job: Veracode
   steps:
-  - template: $(Pipeline.Workspace)/templates/veracode_scan.yml
+  - template: templates/veracode_scan.yml@templates
