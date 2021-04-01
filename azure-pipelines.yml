@@ -10,17 +10,15 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  repositoryBranch: $[replace(variables['Build.SourceBranch'], '/', '-')]
-  repositoryName: variables['Build.Repository.Name']
-  isMain: $[eq(variables['Build.SourceBranch'], 'refs/heads/main')]
+- group: Veracode account credentials
 
 steps:
-- bash: echo $(Build.Repository.Name)
-- bash: echo $(isMain)
-- bash: echo $(repositoryName)
-- bash: echo $(repositoryBranch)
+- powershell: |
+    $repositoryName = "$(Build.Repository.Name)" -replace "/", "_"  
+    echo "##vso[task.setvariable variable=repositoryName;isOutput=true]$repositoryName"
+  name: slashReplacer
 
-- bash: zip -r $(repositoryName).zip . -x ./node_modules/\*
+- bash: zip -r $(slashReplacer.repositoryName).zip . -x ./node_modules/\*
   displayName: 'Zip application to scan'
 
 - bash: curl -O https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip
@@ -30,8 +28,8 @@ steps:
   displayName: Unzip the Pipeline Scanner
 
 - bash: java -jar $(System.DefaultWorkingDirectory)/veracode/pipeline-scan.jar
-        --file $(System.DefaultWorkingDirectory)/${{variables.repositoryName}}.zip
-        --project_name "${{variables.repositoryName}}"
+        --file $(System.DefaultWorkingDirectory)/$(slashReplacer.repositoryName).zip
+        --project_name "$(slashReplacer.repositoryName)"
         --veracode_api_id "$(api_id)"
         --veracode_api_key "$(api_key)"
         --fail_on_severity="Very High, High, Medium"
