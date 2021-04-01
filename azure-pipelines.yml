@@ -12,6 +12,9 @@ resources:
     type: git
     name: ODP-CDS
 
+variables:
+- group: veracode_credentials
+
 pool:
   vmImage: ubuntu-latest
 
@@ -19,3 +22,6 @@ jobs:
 - job: Veracode
   steps:
   - template: templates/veracode_scan.yml@templates
+    parameters:
+      api_id: $(api_id)
+      api_key: $(api_key)
